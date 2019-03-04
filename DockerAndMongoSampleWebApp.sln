@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerAndMongoSampleWebApp.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerAndMongoSampleWebApp.Domain.ValueObjects", "DockerAndMongoSampleWebApp.Domain.ValueObjects\DockerAndMongoSampleWebApp.Domain.ValueObjects.csproj", "{2AF81369-ABF9-4000-8A9F-92905F74903F}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{26AC5B8D-A8A1-43DC-8960-E6DCC4D518D7}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E7CA393F-48DA-47C0-86D6-A69927D8B21E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{2AF81369-ABF9-4000-8A9F-92905F74903F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF81369-ABF9-4000-8A9F-92905F74903F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF81369-ABF9-4000-8A9F-92905F74903F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26AC5B8D-A8A1-43DC-8960-E6DCC4D518D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26AC5B8D-A8A1-43DC-8960-E6DCC4D518D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26AC5B8D-A8A1-43DC-8960-E6DCC4D518D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26AC5B8D-A8A1-43DC-8960-E6DCC4D518D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7CA393F-48DA-47C0-86D6-A69927D8B21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7CA393F-48DA-47C0-86D6-A69927D8B21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7CA393F-48DA-47C0-86D6-A69927D8B21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7CA393F-48DA-47C0-86D6-A69927D8B21E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
