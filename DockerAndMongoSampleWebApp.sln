@@ -3,9 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerAndMongoSampleWebApp", "DockerAndMongoSampleWebApp\DockerAndMongoSampleWebApp.csproj", "{F3359695-A3BD-41AE-B0E1-63EE193E46CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerAndMongoSampleWebApp", "DockerAndMongoSampleWebApp\DockerAndMongoSampleWebApp.csproj", "{F3359695-A3BD-41AE-B0E1-63EE193E46CD}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{45D1019F-8D2B-4A2F-941E-4237CDB9685C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{1BD54929-11ED-49F8-8EEB-8DEDEB6A6DF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{1A37CC63-5976-481D-AE67-7EE7ED52AC28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{647B150A-3F6D-42BF-B763-F5FD2B9F65BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerAndMongoSampleWebApp.Domain", "DockerAndMongoSampleWebApp.Domain\DockerAndMongoSampleWebApp.Domain.csproj", "{F87DD4C1-DD01-402F-BED3-14FD6B22AD7A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerAndMongoSampleWebApp.Infra.MongoDb", "DockerAndMongoSampleWebApp.Infra.MongoDb\DockerAndMongoSampleWebApp.Infra.MongoDb.csproj", "{5C56269B-D6C3-4A40-B906-10FDC9DBC915}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerAndMongoSampleWebApp.Domain.ValueObjects", "DockerAndMongoSampleWebApp.Domain.ValueObjects\DockerAndMongoSampleWebApp.Domain.ValueObjects.csproj", "{2AF81369-ABF9-4000-8A9F-92905F74903F}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{26AC5B8D-A8A1-43DC-8960-E6DCC4D518D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,13 +29,31 @@ Global
 		{F3359695-A3BD-41AE-B0E1-63EE193E46CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3359695-A3BD-41AE-B0E1-63EE193E46CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3359695-A3BD-41AE-B0E1-63EE193E46CD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{45D1019F-8D2B-4A2F-941E-4237CDB9685C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45D1019F-8D2B-4A2F-941E-4237CDB9685C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45D1019F-8D2B-4A2F-941E-4237CDB9685C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45D1019F-8D2B-4A2F-941E-4237CDB9685C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F87DD4C1-DD01-402F-BED3-14FD6B22AD7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F87DD4C1-DD01-402F-BED3-14FD6B22AD7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F87DD4C1-DD01-402F-BED3-14FD6B22AD7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87DD4C1-DD01-402F-BED3-14FD6B22AD7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C56269B-D6C3-4A40-B906-10FDC9DBC915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C56269B-D6C3-4A40-B906-10FDC9DBC915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C56269B-D6C3-4A40-B906-10FDC9DBC915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C56269B-D6C3-4A40-B906-10FDC9DBC915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF81369-ABF9-4000-8A9F-92905F74903F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF81369-ABF9-4000-8A9F-92905F74903F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF81369-ABF9-4000-8A9F-92905F74903F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF81369-ABF9-4000-8A9F-92905F74903F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26AC5B8D-A8A1-43DC-8960-E6DCC4D518D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26AC5B8D-A8A1-43DC-8960-E6DCC4D518D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26AC5B8D-A8A1-43DC-8960-E6DCC4D518D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26AC5B8D-A8A1-43DC-8960-E6DCC4D518D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3359695-A3BD-41AE-B0E1-63EE193E46CD} = {1BD54929-11ED-49F8-8EEB-8DEDEB6A6DF2}
+		{F87DD4C1-DD01-402F-BED3-14FD6B22AD7A} = {1A37CC63-5976-481D-AE67-7EE7ED52AC28}
+		{5C56269B-D6C3-4A40-B906-10FDC9DBC915} = {647B150A-3F6D-42BF-B763-F5FD2B9F65BE}
+		{2AF81369-ABF9-4000-8A9F-92905F74903F} = {1A37CC63-5976-481D-AE67-7EE7ED52AC28}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD21831F-FE17-4601-83DA-BA77BC00DE54}

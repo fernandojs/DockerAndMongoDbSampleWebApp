@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<DockerAndMongoSampleWebApp.Domain.Business>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -57,8 +59,10 @@
     <div class="col-md-3">
         <h2>Application uses</h2>
         <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
+            @foreach (var item in Model)
+            {
+            <li>@item.Name</li>            
+            }
         </ul>
     </div>
     <div class="col-md-3">

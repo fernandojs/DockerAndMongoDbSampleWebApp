@@ -5,6 +5,9 @@ EXPOSE 80
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
 COPY DockerAndMongoSampleWebApp/DockerAndMongoSampleWebApp.csproj DockerAndMongoSampleWebApp/
+COPY DockerAndMongoSampleWebApp.Domain.ValueObjects/DockerAndMongoSampleWebApp.Domain.ValueObjects.csproj DockerAndMongoSampleWebApp.Domain.ValueObjects/
+COPY DockerAndMongoSampleWebApp.Domain/DockerAndMongoSampleWebApp.Domain.csproj DockerAndMongoSampleWebApp.Domain/
+COPY DockerAndMongoSampleWebApp.Infra.MongoDb/DockerAndMongoSampleWebApp.Infra.MongoDb.csproj DockerAndMongoSampleWebApp.Infra.MongoDb/
 RUN dotnet restore DockerAndMongoSampleWebApp/DockerAndMongoSampleWebApp.csproj
 COPY . .
 WORKDIR /src/DockerAndMongoSampleWebApp

@@ -5,39 +5,36 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DockerAndMongoSampleWebApp.Models;
+using DockerAndMongoSampleWebApp.Infra.MongoDb.Interfaces;
+using DockerAndMongoSampleWebApp.Infra.MongoDb.Repository;
+using DockerAndMongoSampleWebApp.Domain;
+using MongoDB.Driver;
 
 namespace DockerAndMongoSampleWebApp.Controllers
 {
     public class HomeController : Controller
     {
+        BusinessRepository _businessRepository;
+        public HomeController(IConnectionMongo connectionMongo)
+        {           
+             _businessRepository = new BusinessRepository(connectionMongo);
+        }
+        
         public IActionResult Index()
         {
-            return View();
+            Console.WriteLine("Hello World!");
+
+            var bizConnection = _businessRepository.GetAll();
+      
+            return View(new List<Business>());
         }
 
-        public IActionResult About()
+        private void testeConn()
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            var client = new MongoClient("mongodb://mongodockersample:27099/test");
+            var db = client.GetDatabase("test");
+            db.CreateCollection("client");
         }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

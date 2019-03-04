@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>45d1019f-8d2b-4a2f-941e-4237cdb9685c</ProjectGuid>
+    <ProjectGuid>26ac5b8d-a8a1-43dc-8960-e6dcc4d518d7</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
     <DockerServiceName>dockerandmongosamplewebapp</DockerServiceName>
